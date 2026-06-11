@@ -1,0 +1,92 @@
+------------ Options -------------
+anormly_ratio: 2.5
+batch_size: 128
+config: config/MSL.conf
+d_model: 128
+data_path: ./dataset/MSL
+dataset: MSL
+dr: 0.1
+encoder_layers: 3
+gpu: 0
+input_c: 55
+lambda_weight: 1.0
+lr: 0.0001
+lradj: cosine
+mode: tes
+model_name: MDAD
+model_save_path: ./checkpoints/MSL
+n_heads: 4
+num_epochs: 10
+num_prototypes: 12
+proto_loss_weight: None
+proto_top_k: 1
+result_dir: result
+scale_patch_len: 8
+scale_patch_stride_mode: half
+seed: 1
+use_revin: 0
+wavelet_level: 3
+wavelet_name: db2
+win_size: 128
+-------------- End ----------------
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+test: (73729, 55)
+train: (58317, 55)
+======================TRAIN MODE======================
+Trainable parameters: 3,234,308
+Score fusion : multiplicative coupling(rec, dyn)
+Epoch: 1, Steps: 455 | Train Loss: 0.0877780 | Vali Loss: 0.0628149 | Time: 48.26s
+Average Training Time per Epoch: 48.258s
+Validation loss improved. Saving model ...
+Updating learning rate to 9.755282581475769e-05
+Epoch: 2, Steps: 455 | Train Loss: 0.0526304 | Vali Loss: 0.0510276 | Time: 62.06s
+Average Training Time per Epoch: 55.157s
+Validation loss improved. Saving model ...
+Updating learning rate to 9.045084971874738e-05
+Epoch: 3, Steps: 455 | Train Loss: 0.0444787 | Vali Loss: 0.0500574 | Time: 60.65s
+Average Training Time per Epoch: 56.989s
+Validation loss improved. Saving model ...
+Updating learning rate to 7.938926261462366e-05
+Epoch: 4, Steps: 455 | Train Loss: 0.0421778 | Vali Loss: 0.0495799 | Time: 59.14s
+Average Training Time per Epoch: 57.526s
+Validation loss improved. Saving model ...
+Updating learning rate to 6.545084971874738e-05
+Epoch: 5, Steps: 455 | Train Loss: 0.0408855 | Vali Loss: 0.0492886 | Time: 62.91s
+Average Training Time per Epoch: 58.604s
+Validation loss improved. Saving model ...
+Updating learning rate to 5e-05
+Epoch: 6, Steps: 455 | Train Loss: 0.0400651 | Vali Loss: 0.0490036 | Time: 62.56s
+Average Training Time per Epoch: 59.264s
+Validation loss improved. Saving model ...
+Updating learning rate to 3.4549150281252636e-05
+Epoch: 7, Steps: 455 | Train Loss: 0.0395271 | Vali Loss: 0.0488289 | Time: 62.61s
+Average Training Time per Epoch: 59.742s
+Validation loss improved. Saving model ...
+Updating learning rate to 2.061073738537635e-05
+Epoch: 8, Steps: 455 | Train Loss: 0.0392113 | Vali Loss: 0.0487610 | Time: 65.41s
+Average Training Time per Epoch: 60.450s
+Validation loss improved. Saving model ...
+Updating learning rate to 9.549150281252633e-06
+Epoch: 9, Steps: 455 | Train Loss: 0.0390292 | Vali Loss: 0.0486838 | Time: 64.06s
+Average Training Time per Epoch: 60.852s
+Validation loss improved. Saving model ...
+Updating learning rate to 2.4471741852423237e-06
+Epoch: 10, Steps: 455 | Train Loss: 0.0389527 | Vali Loss: 0.0486799 | Time: 62.27s
+Average Training Time per Epoch: 60.993s
+Validation loss improved. Saving model ...
+Updating learning rate to 0.0
+======================TEST MODE======================
+Score fusion : multiplicative coupling(rec, dyn)
+Threshold : 4.5675548e-05
+pred:    (73728,)
+gt:      (73728,)
+Testing Time: 0.028s
+pred:  (73728,)
+gt:    (73728,)
+AAPrecision : 0.577, AARecall : 0.953, AAF-score : 0.719
+Accuracy : 0.959, Precision : 0.763, Recall : 0.892, F-score : 0.823, AUC-ROC : 0.6898 , AUC-PR : 0.1825
+Raw-Best-Precision : 0.183, Raw-Best-Recall : 0.745, Raw-Best-F-score : 0.294, Raw-Best-Threshold : 0.00000092
+VUS-ROC: 0.7340, VUS-PR: 0.2053
